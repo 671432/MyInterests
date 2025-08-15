@@ -1,0 +1,102 @@
+html, body {
+  margin: 0 auto;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  min-width: 320px;
+  min-height: 100vh;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #000000;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+
+.hero {
+  height: 100vh;
+  width: 100vw;   
+  background: url("../images/hero.jpg") no-repeat center center;
+  background-size: cover;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.container {
+  text-align: center;
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 30px rgba(255, 105, 180, 0.3);
+  max-width: 300px;
+  margin: 2rem auto;
+  z-index: 3;
+}
+
+h1 {
+  font-size: 1.5em;
+  line-height: 1.1;
+  color: rgb(255, 105, 180);
+}
+
+button:hover {
+  border-color: #ffffff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.socialButtons {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  margin: 12px auto;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.youtube { 
+    background-color: #FF0000; 
+    border-color: #FF0000;
+}
+
+.music { 
+    background-color: #00ffff; 
+    border-color: #00ffff;
+}
+.movies, .shows { 
+    background-color: #4e4e4e; 
+    border-color: #4e4e4e;
+}
+
+.anime { 
+    background-color: #d800cd; 
+    border-color: #d800cd;
+}
+
+.kdrama { 
+    background-color: #6100cf; 
+    border-color: #6100cf;
+}
