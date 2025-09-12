@@ -1,51 +1,41 @@
 html, body {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
-  overflow-x: hidden;
   width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  min-width: 320px;
-  min-height: 100vh;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #000000;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+  color: var(--color-white);
+  background-color: var(--color-bg);
   text-align: center;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
 }
 
 .hero {
   height: 100vh;
-  width: 100vw;   
-  background: url("../images/hero.jpg") no-repeat center center;
-  background-size: cover;
-  
+  width: 100vw;
+  background: url("../images/hero.jpg") no-repeat center/cover;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  color: white;
 }
 
 .container {
-  text-align: center;
-  padding: 40px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
   border-radius: 20px;
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.05);
   border: 2px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 30px rgba(255, 105, 180, 0.3);
-  max-width: 300px;
-  margin: 2rem auto;
-  z-index: 3;
+  max-width: 360px;
 }
 
 h1 {
@@ -54,49 +44,81 @@ h1 {
   color: rgb(255, 105, 180);
 }
 
-button:hover {
-  border-color: #ffffff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-.socialButtons {
+/* Buttons */
+.social, .accordion {
   display: block;
-  width: 100%;
-  max-width: 220px;
-  margin: 12px auto;
+  width: 180px;
+  max-width: 180px;
+  margin: 8px auto;
   padding: 14px;
   font-size: 16px;
+  text-decoration: none;
   font-weight: bold;
   border-radius: 8px;
-  color: rgb(255, 255, 255);
+  color: white;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  font-family: 'Poppins', sans-serif;
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  box-sizing: border-box;
+}
+
+.social:hover, .accordion:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(0,0,0,0.4);
+  filter: brightness(1.1);
+}
+
+.accordionWrapper {
+  width: 100%;
+  justify-self: center;
+  max-width: 180px;
+}
+
+.panel {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;        /* wrap buttons on small screens */
+}
+
+.panel .social {
+  flex: 1 1 0;
+  min-width: 0;
+  font-size: 12px;
+  padding: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .youtube { 
-    background-color: #FF0000; 
-    border-color: #FF0000;
+    background: linear-gradient(160deg, #830000, #ff0000);
+    border: none;
 }
 
 .music { 
-    background-color: #00ffff; 
-    border-color: #00ffff;
+    background: linear-gradient(160deg, #008181, #00ffff);
+    border: none;
 }
-.movies, .shows { 
-    background-color: #4e4e4e; 
-    border-color: #4e4e4e;
+
+/* Gradient for Movies + Shows accordion AND panel buttons */
+.accordion[data-target="movies"],
+.accordion[data-target="shows"],
+.movies,
+.shows {
+  background: linear-gradient(160deg, #000000, #9c9c9c);
+  border: none;
 }
 
 .anime { 
-    background-color: #d800cd; 
-    border-color: #d800cd;
+    background: linear-gradient(160deg, #72006a, #ff00f2);
+    border: none;
 }
 
 .kdrama { 
-    background-color: #6100cf; 
-    border-color: #6100cf;
+    background: linear-gradient(160deg, #300068, #7700ff);
+    border: none;
 }
