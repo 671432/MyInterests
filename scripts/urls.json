@@ -1,0 +1,68 @@
+[
+  {
+    "_comment": "SKIP_https... can be used during testing to skip screenshot generation for that url"
+  },
+  {
+    "name": "youtube",
+    "url": "https://www.youtube.com/@MasterRaxer",
+    "width": 1280,
+    "height": 720,
+    "clip": { "x": 125, "y": 55, "width": 1100, "height": 720 }
+  },
+  {
+    "name": "ytmusic",
+    "url": "SKIP_https://music.youtube.com/channel/UC4wZW8gdEuy_o6AA1JyyGnQ",
+    "width": 1280,
+    "height": 720,
+    "clip": { "x": 240, "y": 80, "width": 1045, "height": 580 }
+  },
+  {
+    "name": "simkl-movies-watched",
+    "url": "SKIP_https://simkl.com/movies/all/all-countries/completed/all-years/user-7334903/",
+    "width": 1280,
+    "height": 720,
+    "clip": { "x": 0, "y": 170, "width": 1280, "height": 720 }
+  },
+  {
+    "name": "simkl-movies-planned",
+    "url": "SKIP_https://simkl.com/movies/all/all-countries/plan-to-watch/all-years/user-7334903/",
+    "width": 1280,
+    "height": 720,
+    "clip": { "x": 0, "y": 170, "width": 1280, "height": 720 }
+  },
+  {
+    "name": "simkl-shows-watching",
+    "url": "SKIP_https://simkl.com/tv/all/all-types/all-countries/watching/all-years/user-7334903/",
+    "width": 1280,
+    "height": 720,
+    "clip": { "x": 0, "y": 170, "width": 1280, "height": 720 }
+  },
+  {
+    "name": "simkl-shows-planning",
+    "url": "SKIP_https://simkl.com/tv/all/all-types/all-countries/plan-to-watch/all-years/user-7334903/",
+    "width": 1280,
+    "height": 720,
+    "clip": { "x": 0, "y": 170, "width": 1280, "height": 720 }
+  },
+  {
+    "name": "simkl-shows-watched",
+    "url": "SKIP_https://simkl.com/tv/all/all-types/all-countries/completed/all-years/user-7334903/",
+    "width": 1280,
+    "height": 720,
+    "clip": { "x": 0, "y": 170, "width": 1280, "height": 720 }
+  },
+  {
+    "name": "mal",
+    "url": "SKIP_https://myanimelist.net/animelist/MasterRaxer?status=2&order=4&order2=0",
+    "width": 1280,
+    "height": 1000,
+    "clip": { "x": 110, "y": 0, "width": 1060, "height": 1000 }
+  },
+  {
+    "name": "mdl",
+    "url": "SKIP_https://mydramalist.com/dramalist/Raxer/completed",
+    "width": 1280,
+    "height": 1000,
+    "clip": { "x": 80, "y": 180, "width": 1120, "height": 1000 }
+  }
+]

@@ -1,0 +1,13 @@
+# Node dependencies
+node_modules/
+ 
+# npm logs
+npm-debug.log*
+ 
+# Lockfile from local installs (optional — see note below)
+# package-lock.json
+ 
+# OS-specific junk
+.DS_Store
+Thumbs.db
+ 

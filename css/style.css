@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -7,8 +8,8 @@ html, body {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: var(--color-white);
-  background-color: var(--color-bg);
+  color: white;
+  background-color: black;
   text-align: center;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
@@ -17,108 +18,111 @@ html, body {
 }
 
 .hero {
-  height: 100vh;
-  width: 100vw;
   background: url("../images/hero.jpg") no-repeat center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.container {
-  padding-top: 20px;
-  padding-bottom: 40px;
-  padding-left: 40px;
-  padding-right: 40px;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 30px rgba(255, 105, 180, 0.3);
-  max-width: 360px;
+.interest-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  max-width: 700px;
+  margin: 2rem auto;
 }
 
-h1 {
-  font-size: 1.5em;
-  line-height: 1.1;
-  color: rgb(255, 105, 180);
-}
-
-/* Buttons */
-.social, .accordion {
+.interest-card,
+.media-link {
+  position: relative;
   display: block;
-  width: 180px;
-  max-width: 180px;
-  margin: 8px auto;
-  padding: 14px;
-  font-size: 16px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
-  color: white;
-  cursor: pointer;
-  border: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
-  box-sizing: border-box;
-}
-
-.social:hover, .accordion:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 12px rgba(0,0,0,0.4);
-  filter: brightness(1.1);
-}
-
-.accordionWrapper {
-  width: 100%;
-  justify-self: center;
-  max-width: 180px;
-}
-
-.panel {
-  display: none;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-  flex-wrap: wrap;        /* wrap buttons on small screens */
-}
-
-.panel .social {
-  flex: 1 1 0;
-  min-width: 0;
-  font-size: 12px;
-  padding: 14px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
+  color: inherit;
+  text-decoration: none;
 }
 
-.youtube { 
-    background: linear-gradient(160deg, #830000, #ff0000);
-    border: none;
+.interest-card span {
+  position: absolute;
+  top: 0.15rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: 600;
+  white-space: nowrap;
+  margin: 0;
+  pointer-events: none;
+  transition:
+    filter 0.2s ease,
+    transform 0.2s ease;
 }
 
-.music { 
-    background: linear-gradient(160deg, #008181, #00ffff);
-    border: none;
+.media-link:hover span,
+.interest-card:hover span {
+  filter: brightness(1.2);
+  transform: translate(-50%, -50%) scale(1.05);
 }
 
-/* Gradient for Movies + Shows accordion AND panel buttons */
-.accordion[data-target="movies"],
-.accordion[data-target="shows"],
+/* Per-card gradient labels (matches old button color scheme) */
+.youtube {
+  background: linear-gradient(160deg, #830000, #ff0000);
+}
+.music {
+  background: linear-gradient(160deg, #008181, #00ffff);
+}
 .movies,
 .shows {
   background: linear-gradient(160deg, #000000, #9c9c9c);
-  border: none;
+}
+.anime {
+  background: linear-gradient(160deg, #72006a, #ff00f2);
+}
+.kdrama {
+  background: linear-gradient(160deg, #300068, #7700ff);
 }
 
-.anime { 
-    background: linear-gradient(160deg, #72006a, #ff00f2);
-    border: none;
+.interest-card img,
+.interest-card .img-placeholder {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #444;
+  display: block;
 }
 
-.kdrama { 
-    background: linear-gradient(160deg, #300068, #7700ff);
-    border: none;
+/* Simkl card behaves like the others but holds buttons + a swappable image */
+.simkl-card {
+  text-align: center;
+}
+
+.simkl-buttons {
+  margin-bottom: 18px;
+}
+.simkl-buttons button {
+  padding: 6px 14px;
+  margin: 4px;
+  border-radius: 6px;
+  border: 1px solid #666;
+  background: #222;
+  color: #eee;
+  cursor: pointer;
+  font-size: 0.85em;
+}
+.simkl-buttons button:hover {
+  background: #333;
+}
+.simkl-buttons button.active {
+  background: #555;
+  border-color: #999;
+}
+
+/* Small-screen tweak: allow single column a bit earlier and shrink gap */
+@media (max-width: 360px) {
+  .interest-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
 }

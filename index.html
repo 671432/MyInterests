@@ -1,45 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Interests</title>
-  <link rel="icon" type="image/jpeg" href="images/logo.jpg">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <header class="hero">
-    <div class="container">
-      <h1>My Interests & Me</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Interests</title>
+    <link rel="icon" type="image/jpeg" href="images/logo.jpg" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="interest-grid">
+        <!-- YouTube -->
+        <a
+          class="interest-card"
+          href="https://www.youtube.com/@MasterRaxer"
+          target="_blank"
+        >
+          <span class="youtube">YouTube</span>
+          <img
+            src="images/screenshots/youtube.png"
+            alt="My YouTube channel"
+            loading="lazy"
+          />
+        </a>
 
-      <!-- Social Buttons -->
-      <div>
-        <a class="social youtube" href="https://www.youtube.com/@MasterRaxer" target="_blank" rel="noopener noreferrer">YouTube</a>
-        <a class="social music" href="https://music.youtube.com/channel/UC4wZW8gdEuy_o6AA1JyyGnQ?si=EwYzZWozzFifliFp" target="_blank" rel="noopener noreferrer">Music</a>
+        <!-- YouTube Music -->
+        <a
+          class="interest-card"
+          href="https://music.youtube.com/channel/UC4wZW8gdEuy_o6AA1JyyGnQ"
+          target="_blank"
+        >
+          <span class="music">Music</span>
+          <img
+            src="images/screenshots/ytmusic.png"
+            alt="My YouTube Music channel"
+            loading="lazy"
+          />
+        </a>
 
-        <div class="accordionWrapper">
-          <button class="accordion" data-target="movies">Movies</button>
-          <div class="panel" id="movies">
-            <a class="social movies" href="https://simkl.com/movies/all/all-countries/completed/all-years/user-7334903/" target="_blank">Watched</a>
-            <a class="social movies" href="https://simkl.com/movies/all/all-countries/plan-to-watch/all-years/user-7334903/" target="_blank">Planned</a>
+        <!-- MyAnimeList -->
+        <a
+          class="interest-card"
+          href="https://myanimelist.net/animelist/MasterRaxer?status=2&order=4&order2=0"
+          target="_blank"
+        >
+          <span class="anime">Anime</span>
+          <img
+            src="images/screenshots/mal.png"
+            alt="My anime list"
+            loading="lazy"
+          />
+        </a>
+
+        <!-- MyDramaList -->
+        <a
+          class="interest-card"
+          href="https://mydramalist.com/dramalist/Raxer/completed"
+          target="_blank"
+        >
+          <span class="kdrama">K-Dramas</span>
+          <img
+            src="images/screenshots/mdl.png"
+            alt="My completed dramas"
+            loading="lazy"
+          />
+        </a>
+
+        <!-- Simkl Movies -->
+        <div class="interest-card simkl-card">
+          <div class="simkl-buttons" id="simkl-movies-buttons">
+            <button onclick="showSimklCard('simkl-movies-watched', this)">
+              Watched
+            </button>
+            <button onclick="showSimklCard('simkl-movies-planned', this)">
+              Planned
+            </button>
           </div>
+          <a id="simkl-movies-link" class="media-link" href="#" target="_blank">
+            <span id="simkl-movies-label" class="movies"></span>
+            <img id="simkl-movies-image" src="" alt="Simkl movies list" />
+          </a>
         </div>
 
-        <div class="accordionWrapper">
-          <button class="accordion" data-target="shows">Shows</button>
-          <div class="panel" id="shows">
-            <a class="social shows" href="https://simkl.com/tv/all/all-types/all-countries/completed/all-years/user-7334903/" target="_blank">Watched</a>
-            <a class="social shows" href="https://simkl.com/tv/all/all-types/all-countries/watching/all-years/user-7334903/" target="_blank">Watching</a>
-            <a class="social shows" href="https://simkl.com/tv/all/all-types/all-countries/plan-to-watch/all-years/user-7334903/" target="_blank">Planned</a>
+        <!-- Simkl Shows -->
+        <div class="interest-card simkl-card">
+          <div class="simkl-buttons" id="simkl-shows-buttons">
+            <button onclick="showSimklCard('simkl-shows-watched', this)">
+              Watched
+            </button>
+            <button onclick="showSimklCard('simkl-shows-watching', this)">
+              Watching
+            </button>
+            <button onclick="showSimklCard('simkl-shows-planning', this)">
+              Planned
+            </button>
           </div>
+          <a id="simkl-shows-link" class="media-link" href="#" target="_blank">
+            <span id="simkl-shows-label" class="shows"></span>
+            <img id="simkl-shows-image" src="" alt="Simkl shows list" />
+          </a>
         </div>
-
-        <a class="social anime" href="https://myanimelist.net/animelist/MasterRaxer?status=2&order=4&order2=0" target="_blank">Anime</a>
-        <a class="social kdrama" href="https://mydramalist.com/dramalist/Raxer/completed" target="_blank">K-Drama</a>
       </div>
-    </div>
-  </header>
-
-  <script src="js/script.js"></script>
-</body>
+    </header>
+    <script src="scripts/simklButtons.js"></script>
+  </body>
 </html>

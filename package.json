@@ -1,0 +1,11 @@
+{
+  "name": "siteScreenshots",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "screenshot": "node scripts/takeScreenshots.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.46.0"
+  }
+}

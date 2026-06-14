@@ -1,0 +1,134 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: white;
+  background-color: black;
+  text-align: center;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hero {
+  height: 100vh;
+  width: 100vw;
+  background: url("../images/hero.jpg") no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 30px rgba(255, 105, 180, 0.3);
+  max-width: 360px;
+}
+
+h1 {
+  font-size: 1.5em;
+  line-height: 1.1;
+  color: rgb(255, 105, 180);
+}
+
+/* Buttons */
+.social,
+.accordion {
+  display: block;
+  width: 180px;
+  max-width: 180px;
+  margin: 8px auto;
+  padding: 14px;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  border: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+  box-sizing: border-box;
+}
+
+img {
+  border-radius: 2rem;
+}
+
+.social:hover,
+.accordion:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  filter: brightness(1.1);
+}
+
+.accordionWrapper {
+  width: 100%;
+  justify-self: center;
+  max-width: 180px;
+}
+
+.panel {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap; /* wrap buttons on small screens */
+}
+
+.panel .social {
+  flex: 1 1 0;
+  min-width: 0;
+  font-size: 12px;
+  padding: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.youtube {
+  background: linear-gradient(160deg, #830000, #ff0000);
+  border: none;
+}
+
+.music {
+  background: linear-gradient(160deg, #008181, #00ffff);
+  border: none;
+}
+
+/* Gradient for Movies + Shows accordion AND panel buttons */
+.accordion[data-target="movies"],
+.accordion[data-target="shows"],
+.movies,
+.shows {
+  background: linear-gradient(160deg, #000000, #9c9c9c);
+  border: none;
+}
+
+.anime {
+  background: linear-gradient(160deg, #72006a, #ff00f2);
+  border: none;
+}
+
+.kdrama {
+  background: linear-gradient(160deg, #300068, #7700ff);
+  border: none;
+}
