@@ -15,10 +15,10 @@ const SIMKL_LISTS = {
     url: "https://simkl.com/tv/all/all-types/all-countries/watching/all-years/user-7334903/",
     label: "Shows - Watching",
   },
-  "simkl-shows-planning": {
-    img: "images/screenshots/simkl-shows-planning.png",
+  "simkl-shows-planned": {
+    img: "images/screenshots/simkl-shows-planned.png",
     url: "https://simkl.com/tv/all/all-types/all-countries/plan-to-watch/all-years/user-7334903/",
-    label: "Shows - Planning",
+    label: "Shows - Planned",
   },
   "simkl-shows-watched": {
     img: "images/screenshots/simkl-shows-watched.png",
