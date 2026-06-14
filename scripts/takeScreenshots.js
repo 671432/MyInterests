@@ -29,6 +29,7 @@ async function dismissCookieBanners(page) {
     'button:has-text("Allow All")',
     'button:has-text("Got it")',
     'button:has-text("Consent")',
+    'button:has-text("Confirm")', // CCPA "Do Not Process My Personal Information" modal for MAL
     '[aria-label="Accept all"]',
     '[aria-label="AGREE"]',
     '[aria-label="Agree"]',
