@@ -133,6 +133,10 @@ async function main() {
       // Try to dismiss any cookie/consent banners that slipped through
       await dismissCookieBanners(page);
 
+      // Move the mouse out of the way so it doesn't leave a hover state
+      // (e.g. on a thumbnail) where the consent button used to be
+      await page.mouse.move(0, 0);
+
       // Small extra wait for lazy-loaded content (thumbnails, lists, etc.)
       await page.waitForTimeout(2000);
 
