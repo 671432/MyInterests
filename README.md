@@ -1,6 +1,6 @@
 > [!WARNING]
-> **This repository has moved**\n
-> This GitHub repo is no longer actively maintained and will not receive further updates.\n
+> **This repository has moved**<br />
+> This GitHub repo is no longer actively maintained and will not receive further updates.<br />
 > Development has moved to GitLab: 
 > **[MyInterests](https://gitlab.com/MasterRaxer/MyInterests)**
 
